@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class SeiveOfErathosthenes{
-    static List<Integer> seive_of_erathosthenes(int n){
+class SieveOfEratosthenes {
+    static List<Integer> sieve_of_erathosthenes(int n){
         boolean[] is_prime = new boolean[n+1];
         List<Integer> primes = new ArrayList<>();
         Arrays.fill(is_prime, true);
@@ -26,7 +26,7 @@ public class SeiveOfErathosthenes{
     public static void main(String[] args){
         System.out.printf("Enter the value of n : ");
         int n = scanner.nextInt();
-        List<Integer> primes = seive_of_erathosthenes(n);
+        List<Integer> primes = sieve_of_erathosthenes(n);
         System.out.printf(primes.toString());
     }
 }

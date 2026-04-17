@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.*;
 
 class ModularArithimetic{
@@ -28,7 +29,7 @@ class ModularArithimetic{
 
         int result = modularExponentiation(a,b/2,m);
 
-        if(b%2){
+        if(b%2!=0){
             return (((result*result)%m)*b)%m;
         }
 
@@ -36,10 +37,10 @@ class ModularArithimetic{
     }
 
     static int modularInverse(int b,int m){
-        BigInteger b = new BigInteger.valueOf(b);
-        BigInteger m = new BigInteger.valueOf(m);
-        if(a.gcd(b)!=1){
-            return modularExponentiation(a,m-2,m);
+        BigInteger B = BigInteger.valueOf(b);
+        BigInteger M = BigInteger.valueOf(m);
+        if(!B.gcd(M).equals(BigInteger.ONE)){
+            return modularExponentiation(b,m-2,m);
         }
         return -1;
     }

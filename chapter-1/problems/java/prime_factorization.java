@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PrimeFactorization{
+class PrimeFactorization{
     static Scanner scanner = new Scanner(System.in);
 
     static void primeFactorization(int n, List<Integer> factors){

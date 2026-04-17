@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class IsPrime{
+class IsPrime{
     static Scanner scanner = new Scanner(System.in);
 
     static boolean isPrime(int n){
